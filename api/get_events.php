@@ -62,6 +62,7 @@ try {
         $html .= '      <button class="btn btn-sm btn-outline-primary register-btn" ';
         $html .= '              data-event-id="' . (int)$event['id'] . '">';
         $html .= '        Register ✨';
+        $html .= '      <a href="reviews.php" class="btn btn-sm btn-link mt-2">View / add reviews 💬</a>';
         $html .= '      </button>';
 
         $html .= '    </div>';
