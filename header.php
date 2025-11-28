@@ -1,6 +1,16 @@
 <?php
 // 💖 Starting a session so I can remember who's logged in!
 session_start();
+// 🌸 Handle theme switching via cookie
+if (isset($_POST['theme'])) {
+    $newTheme = ($_POST['theme'] === 'dark') ? 'dark' : 'light';
+    setcookie('theme', $newTheme, time() + 60*60*24*30, '/'); // 30 days
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit;
+}
+
+$currentTheme = $_COOKIE['theme'] ?? 'light';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +32,7 @@ session_start();
 </head>
 
 <!-- 💕 light background because it's aesthetic -->
-<body class="bg-light">
+<body class="<?= ($currentTheme === 'dark') ? 'bg-dark text-white' : 'bg-light text-dark' ?>">
 
 <!-- 🌸 Navigation bar (very important!) -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -62,6 +72,12 @@ session_start();
             </ul>
         </div>
     </div>
+    <form method="POST" class="d-flex ms-3">
+    <input type="hidden" name="theme" value="<?= ($currentTheme === 'dark') ? 'light' : 'dark' ?>">
+    <button class="btn btn-sm <?= ($currentTheme === 'dark') ? 'btn-light' : 'btn-dark' ?>">
+        <?= ($currentTheme === 'dark') ? 'Light Mode 🌞' : 'Dark Mode 🌙' ?>
+    </button>
+</form>
 </nav>
 
 <!-- 🌸 Cute little wrapper for each page -->
