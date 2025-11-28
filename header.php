@@ -32,8 +32,8 @@ $currentTheme = $_COOKIE['theme'] ?? 'light';
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 
-<!-- 💕 light background because it's aesthetic -->
-<body class="<?= ($currentTheme === 'dark') ? 'bg-dark text-white' : 'bg-light text-dark' ?>">
+<!-- 💕 light background & dark because it's aesthetic -->
+<body class="<?= ($currentTheme === 'dark') ? 'theme-dark' : 'theme-light' ?>">
 
 <!-- 🌸 Navigation bar (very important!) -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
