@@ -7,7 +7,7 @@ body {
 
 /* 🌸 Light & Dark theme basics */
 body.theme-light {
-    background-color: #f8f9fa; /* стандартный светлый фон bootstrap */
+    background-color: #f8f9fa;
     color: #212529;
 }
 
@@ -16,21 +16,21 @@ body.theme-dark {
     color: #f8f9fa;
 }
 
-/* Карточки в тёмной теме */
+/* Cards & modals in dark mode */
 body.theme-dark .card,
 body.theme-dark .modal-content {
     background-color: #1e1e1e;
     color: #f8f9fa;
 }
 
-/* Алёрты в тёмной теме */
+/* Alerts in dark mode */
 body.theme-dark .alert {
     background-color: #1e1e1e;
     color: #f8f9fa;
     border-color: #333;
 }
 
-/* Кнопки с обводкой в тёмной теме */
+/* Outline buttons in dark mode */
 body.theme-dark .btn-outline-primary {
     border-color: #f8f9fa;
     color: #f8f9fa;
@@ -41,11 +41,31 @@ body.theme-dark .btn-outline-primary:hover {
     color: #000;
 }
 
-/* Ссылки в тёмной теме */
+/* Links in dark mode */
 body.theme-dark a {
     color: #9ad0ff;
 }
 
 body.theme-dark a:hover {
     color: #cbe4ff;
+}
+
+/* 🌙 Fix hero / white panels in dark mode */
+body.theme-dark .bg-white {
+    background-color: #1e1e1e !important;
+}
+
+body.theme-dark .text-muted {
+    color: #e0e0e0 !important;
+}
+
+/* Navbar in dark mode */
+body.theme-dark .navbar,
+body.theme-dark .navbar-light {
+    background-color: #1e1e1e !important;
+}
+
+/* Buttons on dark background – сделать чуть ярче */
+body.theme-dark .btn-primary {
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
 }

@@ -1,35 +1,29 @@
 <?php
-// 💖 Starting a session so I can remember who's logged in!
 session_start();
+
 // 🌸 Handle theme switching via cookie
 if (isset($_POST['theme'])) {
     $newTheme = ($_POST['theme'] === 'dark') ? 'dark' : 'light';
-    setcookie('theme', $newTheme, time() + 60*60*24*30, '/'); // 30 days
-    header("Location: " . $_SERVER['PHP_SELF']);
+    setcookie('theme', $newTheme, time() + 60 * 60 * 24 * 30, '/'); // 30 days
+    // reload same page so new cookie is applied
+    header("Location: " . $_SERVER['REQUEST_URI']);
     exit;
 }
 
 $currentTheme = $_COOKIE['theme'] ?? 'light';
-
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Campus Connect 🌸</title>
+    <meta charset="utf-8">
+    <title>Campus Connect</title>
+
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
-    <!-- 🎀 Responsive design magic -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- 🌼 Bootstrap CSS for beautiful styling out of the box -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- 🌸 My custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- 🍬 Cute little favicon (I'll add image later) -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <!-- 💕 light background & dark because it's aesthetic -->
