@@ -43,7 +43,7 @@ sql/ — database schema
 1. Move project to `www/`  
 2. Create database `campus_connect`  
 3. Import `sql/campus_connect.sql`  
-4. Open: http://localhost/campus_connect/
+4. Open: http://localhost/campusconnect/
 
 ## 💛 Admin Access
 UPDATE users SET role='admin' WHERE id=1;
