@@ -8,6 +8,12 @@ $name       = $isLoggedIn ? ($_SESSION['name'] ?? 'student') : null;
 
 <div class="p-5 mb-4 bg-white rounded-3 shadow-sm mt-3">
     <div class="container-fluid py-5">
+    
+    <img src="images/hero-campus.jpg"
+     alt="Campus life"
+     class="img-fluid rounded mb-4 w-100"
+     style="max-height:320px; object-fit:cover;">
+    
         <?php if ($isLoggedIn): ?>
             <h1 class="display-5 fw-bold">Welcome back, <?= htmlspecialchars($name) ?> 🌸</h1>
             <p class="col-md-8 fs-5">
