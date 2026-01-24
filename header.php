@@ -34,7 +34,12 @@ $currentTheme = $_COOKIE['theme'] ?? 'light';
     <div class="container">
 
         <!-- 🎀 Logo / Home button -->
-        <a class="navbar-brand" href="index.php">Campus Connect</a>
+<a class="navbar-brand d-flex align-items-center" href="index.php">
+    <img src="images/logo-campus-connect.png"
+         alt="Campus Connect Logo"
+         style="height:40px; margin-right:10px;">
+    Campus Connect
+</a>
 
         <!-- 🌼 Mobile menu button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
