@@ -8,6 +8,11 @@ include 'header.php';
     Grab some hoodies, mugs and stickers to show your campus spirit 💚
 </p>
 
+<img src="images/merch-placeholder.jpg"
+     alt="Campus merchandise"
+     class="img-fluid rounded mb-4 w-100"
+     style="max-height:260px; object-fit:cover;">
+
 <div id="merchCartSummary" class="mb-3">
     <!-- 🌸 Cart summary will be loaded here -->
 </div>
