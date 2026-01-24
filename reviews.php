@@ -14,6 +14,15 @@ $eventsList = $eventsStmt->fetchAll(PDO::FETCH_ASSOC);
     Share your experience about campus events and see what others think 🌸
 </p>
 
+<div class="d-flex align-items-center gap-3 mb-4">
+    <img src="images/profile-placeholder.png"
+         alt="Student profile"
+         style="width:64px; height:64px; border-radius:50%; object-fit:cover;">
+    <div class="text-muted">
+        Real student feedback helps everyone pick the best events ⭐
+    </div>
+</div>
+
 <div id="reviewMessage"></div>
 
 <?php if (empty($_SESSION['user_id'])): ?>
