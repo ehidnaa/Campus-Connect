@@ -8,6 +8,11 @@ include 'header.php';
     Here are some things happening around campus. Click "Register" to join ✨
 </p>
 
+<img src="images/event-placeholder.jpg"
+     alt="Campus events"
+     class="img-fluid rounded mb-4 w-100"
+     style="max-height:260px; object-fit:cover;">
+
 <div id="eventsMessage"></div>
 
 <div id="eventsList">
