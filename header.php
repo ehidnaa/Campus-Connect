@@ -35,7 +35,7 @@ $currentTheme = $_COOKIE['theme'] ?? 'light';
 
         <!-- 🎀 Logo / Home button -->
 <a class="navbar-brand d-flex align-items-center" href="index.php">
-    <img src="images/logo-campus-connect.png"
+    <img src="images/logo-campus-connect.jpg"
          alt="Campus Connect Logo"
          style="height:40px; margin-right:10px;">
     Campus Connect
