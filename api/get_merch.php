@@ -20,19 +20,28 @@ try {
 
     $html = '<div class="row g-3">';
     foreach ($items as $item) {
+        $id    = (int)($item['id'] ?? 0);
+        $name  = (string)($item['name'] ?? '');
+        $price = (float)($item['price'] ?? 0);
+        $img   = (string)($item['image'] ?? '');
+
+        // ✅ If DB image is empty, show placeholder
+        $imageFile = $img !== '' ? $img : 'merch-placeholder.jpg';
+
         $html .= '<div class="col-md-4">';
         $html .= '  <div class="card h-100 shadow-sm">';
-        if (!empty($item['image'])) {
-            $html .= '    <img src="images/' . htmlspecialchars($item['image']) . '" class="card-img-top" alt="Merch image">';
-        }
+
+        // ✅ Emoji instead of image (no broken paths ever)
+        $html .= '    <div class="text-center py-4 fs-1">👕</div>';
+
         $html .= '    <div class="card-body d-flex flex-column">';
-        $html .= '      <h5 class="card-title">' . htmlspecialchars($item['name']) . '</h5>';
-        $html .= '      <p class="card-text mb-2">€' . number_format($item['price'], 2) . '</p>';
-        $html .= '      <button class="btn btn-sm btn-outline-primary mt-auto merch-add-btn" ';
-        $html .= '              data-merch-id="' . (int)$item['id'] . '">';
+        $html .= '      <h5 class="card-title">' . htmlspecialchars($name) . '</h5>';
+        $html .= '      <p class="card-text mb-2">€' . number_format($price, 2) . '</p>';
+        $html .= '      <button class="btn btn-sm btn-outline-primary mt-auto merch-add-btn" data-merch-id="' . $id . '">';
         $html .= '        Add to cart ✨';
         $html .= '      </button>';
         $html .= '    </div>';
+
         $html .= '  </div>';
         $html .= '</div>';
     }
