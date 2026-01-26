@@ -15,7 +15,7 @@ $eventsList = $eventsStmt->fetchAll(PDO::FETCH_ASSOC);
 </p>
 
 <div class="d-flex align-items-center gap-3 mb-4">
-    <img src="images/profile-placeholder.png"
+    <img src="images/profile-placeholder.jpg"
          alt="Student profile"
          style="width:64px; height:64px; border-radius:50%; object-fit:cover;">
     <div class="text-muted">
